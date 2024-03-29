@@ -71,3 +71,5 @@ RUN ldconfig
 RUN pip install --upgrade pip
 RUN pip install --root-user-action=ignore ipaddr
 RUN pip install --root-user-action=ignore ply
+
+WORKDIR /p4c
