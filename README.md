@@ -1,4 +1,4 @@
-# Bachelor Thesis Introducing a Credit-Based Flow Control Mechanism for the Internet Service Provider Networks using P4
+# Bachelor Thesis: Introducing a Credit-Based Flow Control Mechanism for the Internet Service Provider Networks using P4
 It was written by the Max Planck Institute with Prof. Dr. Anja Feldmann as 1. advisor, Dr. Yiting Xia as 2. advisor and Seifeddine Fathalli as supervisor. 
 This repo contains all the code, which is used for the Bachelor Thesis. 
 
