@@ -73,3 +73,4 @@ RUN pip install --root-user-action=ignore ipaddr
 RUN pip install --root-user-action=ignore ply
 
 WORKDIR /p4c
+RUN apt install tcpdump
