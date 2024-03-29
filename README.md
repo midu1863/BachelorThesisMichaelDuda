@@ -35,7 +35,7 @@ and for simple port forwarding use
 
 To stop the test environment just use
 ```sh
-end.sh
+./end.sh
 ```
 
 If you make changes due the program you can compile all 3. software of each switch with
@@ -44,25 +44,25 @@ complile.sh creditBasedPackedCycle.p4 creditBasedPackedCycle.bmv2
 ```
 or for simple port forwarding 
 ```sh
-complile.sh basic.p4 basic.bmv2
+./complile.sh basic.p4 basic.bmv2
 ```
 If you want compile only one software use
 ```sh
-complile_one.sh sw0 basic.p4 basic.bmv2
+./complile_one.sh sw0 basic.p4 basic.bmv2
 ```
 
 To run a test and monitor it run
 ```sh
-runBenchmark.sh ___nameOfSoftware___ ___lableName___ ___timeInSeconds___ ___concurrentConnection___
-runBenchmark.sh creditBasedPackedCycle test 60 '-P 1'
+./runBenchmark.sh ___nameOfSoftware___ ___lableName___ ___timeInSeconds___ ___concurrentConnection___
+./runBenchmark.sh creditBasedPackedCycle test 60 '-P 1'
 ## For UDP 
-runBenchmark.sh creditBasedPackedCycle test 60 '-P 1 -u -b 50m' 
+./runBenchmark.sh creditBasedPackedCycle test 60 '-P 1 -u -b 50m' 
 ```
 The flage ___-P___ is for concurrent connection,  ___-u___ for UDP instead of TCP and ___-b 50m___ is for UDP to set the bandwidth of the UDP stream. 
 
 To run a batch of test you can use allTest.sh. 
 ```sh
-allTest.sh
+./allTest.sh
 ```
 Before run it, please make sure, that you have all test written down. 
 
