@@ -3,7 +3,7 @@ It was written by the Max Planck Institute with Prof. Dr. Anja Feldmann as 1. ad
 This repo contains all the code, which is used for the Bachelor Thesis. 
 
 Please consider, that the computation time can be differ. If you want to run it on your CPU reconfigure in ___sw2___ these line with your CPU resources: 
-```P4Lang
+```P4
 if (leftOver <= 30) {
                  bit<19> queue = 0;
                 egressEnqueueDepth.read(queue, 1);
