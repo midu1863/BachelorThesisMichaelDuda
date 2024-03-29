@@ -2,7 +2,21 @@
 It was written by the Max Planck Institute with Prof. Dr. Anja Feldmann as 1. advisor, Dr. Yiting Xia as 2. advisor and Seifeddine Fathalli as supervisor. 
 This repo contains all the code, which is used for the Bachelor Thesis. 
 
+Please consider, that the computation time can be differ. If you want to run it on your CPU reconfigure in ___sw2___ these line with your CPU resources: 
+```P4Lang
+if (leftOver <= 30) {
+                 bit<19> queue = 0;
+                egressEnqueueDepth.read(queue, 1);
+                if(queue > 500) {
+                    sendMirrorCup((bit<32>) standard_metadata.ingress_port + 1);
+                    leftOverCreditCard.write((bit<32>) subnet, 30);
+                } else {
+                    sendMirrorCup((bit<32>) standard_metadata.ingress_port + 1);
+                    leftOverCreditCard.write((bit<32>) subnet, 40);
+                }
 
+            }
+```
 
 First build your images for docker. 
 ```sh
@@ -45,3 +59,11 @@ runBenchmark.sh creditBasedPackedCycle test 60 '-P 1'
 runBenchmark.sh creditBasedPackedCycle test 60 '-P 1 -u -b 50m' 
 ```
 The flage ___-P___ is for concurrent connection,  ___-u___ for UDP instead of TCP and ___-b 50m___ is for UDP to set the bandwidth of the UDP stream. 
+
+To run a batch of test you can use allTest.sh. 
+```sh
+allTest.sh
+```
+Before run it, please make sure, that you have all test written down. 
+
+
