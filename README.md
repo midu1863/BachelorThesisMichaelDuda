@@ -37,9 +37,11 @@ If you want compile only one software use
 complile_one.sh sw0 basic.p4 basic.bmv2
 ```
 
-To run a test an monitor it run
+To run a test and monitor it run
 ```sh
 runBenchmark.sh ___nameOfSoftware___ ___lableName___ ___timeInSeconds___ ___concurrentConnection___
 runBenchmark.sh creditBasedPackedCycle test 60 '-P 1'
-runBenchmark.sh creditBasedPackedCycle test 60 '-P 1 -u' 
+## For UDP 
+runBenchmark.sh creditBasedPackedCycle test 60 '-P 1 -u -b 50m' 
 ```
+The flage ___-P___ is for concurrent connection,  ___-u___ for UDP instead of TCP and ___-b 50m___ is for UDP to set the bandwidth of the UDP stream. 
